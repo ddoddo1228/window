@@ -14,25 +14,83 @@ namespace Kiosk
 {
     public partial class MenuForm : Form
     {
-        int[] money = new int[12];
         int amount = 0;
-
         private int[] previousValues;
         private int[] Checked;
         private Label[] labels_name;
         private Label[] labels_price;
         private PictureBox[] pboxes;
-        private PictureBox[] items;
-        private Button[] buttons;
+        private PictureBox[] items_image;
         private Button[] items_remove;
-        private Panel[] panels;
-        private Label[] addLabels;
         private Label[] items_name;
         private Label[] items_price;
-        private NumericUpDown[] itemupdown;
-
+        private NumericUpDown[] items_quantity;
         public static string Value { get; private set; }
 
+        public MenuForm()
+        {
+            InitializeComponent();
+            InitializeComponents();
+        }
+        //컴포넌트 집합 함수
+        private void InitializeComponents()
+        {
+            InitializeThings();
+            InitializeDynamicComponents();
+            InitializePictureBoxes();
+            InitializeNumericUpDown();
+            InitializeButtons();
+        }
+        //레이아웃 컴포넌트
+        private void InitializeDynamicComponents()
+        {
+            this.SuspendLayout();
+            this.ClientSize = new Size(1200, 800);
+            this.ResumeLayout(false);
+        }
+        // 다양한 컨트롤들을 배열로 정리
+        private void InitializeThings()
+        {
+            labels_name = new Label[] { lbl1_name, lbl2_name, lbl3_name, lbl4_name, lbl5_name, lbl6_name, lbl7_name, lbl8_name, lbl9_name, lbl10_name, lbl11_name, lbl12_name };
+            labels_price = new Label[] { lbl1_price, lbl2_price, lbl3_price, lbl4_price, lbl5_price, lbl6_price, lbl7_price, lbl8_price, lbl9_price, lbl10_price, lbl11_price, lbl11_price, lbl12_price };
+            pboxes = new PictureBox[] { pbox_1, pbox_2, pbox_3, pbox_4, pbox_5, pbox_6, pbox_7, pbox_8, pbox_9, pbox_10, pbox_11, pbox_12 };
+            items_image = new PictureBox[] { item1_image, item2_image, item3_image, item4_image, item5_image };
+            items_name = new Label[] { item1_name, item2_name, item3_name, item4_name, item5_name };
+            items_quantity = new NumericUpDown[] { item1_quantity, item2_quantity, item3_quantity, item4_quantity, item5_quantity };
+            items_price = new Label[] { item1_price, item2_price, item3_price, item4_price, item5_price };
+            items_remove = new Button[] { item1_remove, item2_remove, item3_remove, item4_remove, item5_remove };
+            Checked = new int[5];
+        }
+        // 배열로 이벤트 할당
+        private void InitializeNumericUpDown()
+        {
+            previousValues = new int[items_quantity.Length];
+            for (int i = 0; i < items_quantity.Length; i++)
+            {
+                items_quantity[i].ValueChanged += item_quantity_ValueChanged;
+                items_quantity[i].Tag = i;
+                previousValues[i] = (int)items_quantity[i].Value;
+            }
+        }
+        private void InitializePictureBoxes()
+        {
+            for (int i = 0; i < pboxes.Length; i++)
+            {
+                pboxes[i].Click += PictureBox_Click;
+                pboxes[i].Tag = i; // Set the Tag property to store the index
+            }
+        }
+
+        private void InitializeButtons()
+        {
+            for (int i = 0; i < items_remove.Length; i++)
+            {
+                items_remove[i].Click += Button_Remove_Click;
+                items_remove[i].Tag = i; // Set the Tag property to store the index
+            }
+        }
+
+        // 각 메뉴에 해당하는 텍스트와 가격 할당
         private string[] GetMenuNamesByCategory(string category)
         {
             switch (category)
@@ -56,109 +114,42 @@ namespace Kiosk
         {
             switch (menuName)
             {
-                case "아메리카노":
-                    return 3000;
-                case "디카페인 아메리카노":
-                    return 3000;
-                case "콜드브루":
-                    return 3500;
-                case "에스프레소":
-                    return 2500;
-                case "돌체 콜드브루":
-                    return 4000;
-                case "오트 콜드브루":
-                    return 4500;
-                case "카라멜 마끼아또":
-                    return 4500;
-                case "카페 라떼":
-                    return 4000;
-                case "딸기 스무디":
-                    return 4000;
-                case "블루베리 스무디":
-                    return 4500;
-                case "망고 스무디":
-                    return 4500;
-                case "바나나 스무디":
-                    return 4500;
-                case "딸기 요거트 스무디":
-                    return 4500;
-                case "망고 요거트 스무디":
-                    return 4500;
-                case "타로 블루베리 스무디":
-                    return 4500;
-                case "자몽 스무디":
-                    return 4500;
-                case "레몬 에이드":
-                    return 4500;
-                case "자몽 에이드":
-                    return 4500;
-                case "오렌지 에이드":
-                    return 4500;
-                case "청포도 에이드":
-                    return 4500;
-                case "라임 에이드":
-                    return 4500;
-                case "딸기 에이드":
-                    return 4500;
-                case "레드 레몬 에이드":
-                    return 4500;
-                case "수박 에이드":
-                    return 4500;
-                case "초코 케이크":
-                    return 5000;
-                case "치즈 케이크":
-                    return 5000;
-                case "카스테라":
-                    return 500;
-                case "녹차 케이크":
-                    return 3000;
-                case "블루베리 치즈 케이크":
-                    return 4500;
-                case "티라미수":
-                    return 5000;
-                case "레드벨벳 치즈 케이크":
-                    return 3000;
-                case "화이트 케이크":
-                    return 5000;
-                default:
-                    return 0;
+                case "아메리카노":return 3000;
+                case "디카페인 아메리카노":return 3000;
+                case "콜드브루":return 3500;
+                case "에스프레소":return 2500;
+                case "돌체 콜드브루":return 4000;
+                case "오트 콜드브루":return 4500;
+                case "카라멜 마끼아또":return 4500;
+                case "카페 라떼":return 4000;
+                case "딸기 스무디":return 4000;
+                case "블루베리 스무디":return 4500;
+                case "망고 스무디":return 4500;
+                case "바나나 스무디":return 4500;
+                case "딸기 요거트 스무디":return 4500;
+                case "망고 요거트 스무디":return 4500;
+                case "타로 블루베리 스무디":return 4500;
+                case "자몽 스무디":return 4500;
+                case "레몬 에이드":return 4500;
+                case "자몽 에이드":return 4500;
+                case "오렌지 에이드":return 4500;
+                case "청포도 에이드":return 4500;
+                case "라임 에이드":return 4500;
+                case "딸기 에이드":return 4500;
+                case "레드 레몬 에이드":return 4500;
+                case "수박 에이드":return 4500;
+                case "초코 케이크":return 5000;
+                case "치즈 케이크":return 5000;
+                case "카스테라":return 500;
+                case "녹차 케이크":return 3000;
+                case "블루베리 치즈 케이크":return 4500;
+                case "티라미수":return 5000;
+                case "레드벨벳 치즈 케이크":return 3000;
+                case "화이트 케이크":return 5000;
+                default:return 0;
             }
-        }
-
-        private void InitialLabel()
-        {
-            labels_name = new Label[] { lbl1_name, lbl2_name, lbl3_name, lbl4_name, lbl5_name, lbl6_name, lbl7_name, lbl8_name, lbl9_name, lbl10_name, lbl11_name, lbl12_name };
-            labels_price = new Label[] { lbl1_price, lbl2_price, lbl3_price, lbl4_price, lbl5_price, lbl6_price, lbl7_price, lbl8_price, lbl9_price, lbl10_price, lbl11_price, lbl11_price, lbl12_price };
-            pboxes = new PictureBox[] { pbox_1, pbox_2, pbox_3, pbox_4, pbox_5, pbox_6, pbox_7, pbox_8, pbox_9, pbox_10, pbox_11, pbox_12 };
-            items = new PictureBox[] { item1, item2, item3, item4, item5 };
-            items_name = new Label[] { item1_name, item2_name, item3_name, item4_name, item5_name };
-            itemupdown = new NumericUpDown[] { item1_updown, item2_updown, item3_updown, item4_updown, item5_updown };
-            items_price = new Label[] { item1_price, item2_price, item3_price, item4_price, item5_price };
-            items_remove = new Button[] { item1_remove, item2_remove, item3_remove, item4_remove, item5_remove };
-            Checked = new int[5];
-        }
-        private void InitializeDynamicComponents()
-        {
-            this.SuspendLayout();
-            this.ClientSize = new Size(1200, 800);
-            this.ResumeLayout(false);
-        }
-
-        private void InitializeComponents()
-        {
-            InitialLabel();
-            InitializeDynamicComponents();
-            InitializePictureBoxes();
-            InitializeNumericUpDown();
-            InitializeButtons();
-        }
-
-        public MenuForm()
-        {
-            InitializeComponent();
-            InitializeComponents();
-        }
-
+        }                      
+        // 메뉴 로드
         private void LoadMenuItems(string category)
         {
             String[] Menu = GetMenuNamesByCategory(category);
@@ -176,6 +167,7 @@ namespace Kiosk
                 }
             }
         }
+        //초기 로드시 1번 메뉴항목 할당
         private void Form2_Load(object sender, EventArgs e)
         {
             button1_Click(sender, e);
@@ -201,11 +193,6 @@ namespace Kiosk
         {
             LoadMenuItems("기타");
         }
-        private void button6_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void PictureBox_Click(object sender, EventArgs e)
         {
             if (sender is PictureBox clickedPictureBox && clickedPictureBox.Tag is int index)
@@ -216,11 +203,11 @@ namespace Kiosk
                     return;
                 }
                 Image clickedImage = new Bitmap(clickedPictureBox.Image);
-                for (int i = 0; i < items.Length; i++)
+                for (int i = 0; i < items_image.Length; i++)
                 {
-                    if (items[i].Image == null)
+                    if (items_image[i].Image == null)
                     {
-                        items[i].Image = clickedImage;
+                        items_image[i].Image = clickedImage;
 
                         // 해당 픽쳐박스와 동일한 인덱스의 lables_name을 가져와서 items[i]_name에 할당
                         if (items_name[0].Text != "")
@@ -270,38 +257,9 @@ namespace Kiosk
                     }
                 }
             }
-        }
-
-        private void InitializePictureBoxes()
-        {
-            for (int i = 0; i < pboxes.Length; i++)
-            {
-                pboxes[i].Click += PictureBox_Click;
-                pboxes[i].Tag = i; // Set the Tag property to store the index
-            }
-        }
-
-        private void InitializeButtons()
-        {
-            for (int i = 0; i < items_remove.Length; i++)
-            {
-                items_remove[i].Click += Button_Remove_Click;
-                items_remove[i].Tag = i; // Set the Tag property to store the index
-            }
-        }
-
-        private void InitializeNumericUpDown()
-        {
-            previousValues = new int[itemupdown.Length];
-            for (int i = 0; i < itemupdown.Length; i++)
-            {
-                itemupdown[i].ValueChanged += item_updown_ValueChanged;
-                itemupdown[i].Tag = i;
-                previousValues[i] = (int)itemupdown[i].Value;
-            }
-        }
-
-        private void item_updown_ValueChanged(object sender, EventArgs e)
+        }        
+        // 수량 변경시 현재와 과거의 수량을 비교하여 amount를 증감함
+        private void item_quantity_ValueChanged(object sender, EventArgs e)
         {
             if (sender is NumericUpDown numericUpDown && numericUpDown.Tag is int index)
             {
@@ -315,7 +273,7 @@ namespace Kiosk
                 int previousValue = previousValues[index];
                 if (items_name[index].Text == "")
                 {
-                    itemupdown[index].Value = 1;
+                    items_quantity[index].Value = 1;
                     return;
                 }
                 if (currentValue > previousValue)
@@ -338,6 +296,7 @@ namespace Kiosk
                 previousValues[index] = currentValue;
             }             
         }
+        // 메뉴 옆 X버튼 클릭시 이미지와 텍스트를 제거하고 amount에서 해당가격만큼 감소시킴
         private void Button_Remove_Click(object sender, EventArgs e)
         {
             if (sender is Button button && button.Tag is int index)
@@ -350,12 +309,12 @@ namespace Kiosk
                 {
                     return;
                 }
-                amount -= int.Parse(items_price[index].Text) * (int)itemupdown[index].Value;
+                amount -= int.Parse(items_price[index].Text) * (int)items_quantity[index].Value;
                 tbox_amount.Text = amount.ToString();
-                items[index].Image = null;
+                items_image[index].Image = null;
                 items_name[index].Text = "";
                 items_price[index].Text ="";
-                itemupdown[index].Value = 1;
+                items_quantity[index].Value = 1;
                 Checked[index]=1;
             }
         }
@@ -365,7 +324,7 @@ namespace Kiosk
             for (int i = 0; i < 5; i++)
             {
                 cform.n[i] = items_name[i].Text;              
-                cform.q[i] = (int)itemupdown[i].Value;
+                cform.q[i] = (int)items_quantity[i].Value;
                 if (items_price[i].Text == "")
                 {
                     cform.p[i] = 0;

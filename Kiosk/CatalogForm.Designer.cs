@@ -32,10 +32,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.lbl_name = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.panel44 = new System.Windows.Forms.Panel();
+            this.lbl_stackpoint = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
             this.panel43 = new System.Windows.Forms.Panel();
             this.lbl_list = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
             this.panel42 = new System.Windows.Forms.Panel();
+            this.btn_remove = new System.Windows.Forms.Button();
             this.lbl_point = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.panel41 = new System.Windows.Forms.Panel();
@@ -114,12 +118,9 @@
             this.item5_custom = new System.Windows.Forms.Label();
             this.panel38 = new System.Windows.Forms.Panel();
             this.label31 = new System.Windows.Forms.Label();
-            this.panel44 = new System.Windows.Forms.Panel();
-            this.lbl_getpoint = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btn_no = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.panel44.SuspendLayout();
             this.panel43.SuspendLayout();
             this.panel42.SuspendLayout();
             this.panel41.SuspendLayout();
@@ -162,7 +163,6 @@
             this.panel36.SuspendLayout();
             this.panel37.SuspendLayout();
             this.panel38.SuspendLayout();
-            this.panel44.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -211,6 +211,38 @@
             this.panel2.Size = new System.Drawing.Size(332, 601);
             this.panel2.TabIndex = 1;
             // 
+            // panel44
+            // 
+            this.panel44.Controls.Add(this.lbl_stackpoint);
+            this.panel44.Controls.Add(this.label5);
+            this.panel44.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel44.Location = new System.Drawing.Point(0, -10);
+            this.panel44.Name = "panel44";
+            this.panel44.Size = new System.Drawing.Size(332, 103);
+            this.panel44.TabIndex = 5;
+            // 
+            // lbl_stackpoint
+            // 
+            this.lbl_stackpoint.Dock = System.Windows.Forms.DockStyle.Right;
+            this.lbl_stackpoint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.lbl_stackpoint.Location = new System.Drawing.Point(218, 0);
+            this.lbl_stackpoint.Name = "lbl_stackpoint";
+            this.lbl_stackpoint.Size = new System.Drawing.Size(114, 103);
+            this.lbl_stackpoint.TabIndex = 1;
+            this.lbl_stackpoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label5
+            // 
+            this.label5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.label5.Font = new System.Drawing.Font("굴림", 9F);
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(212, 103);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "주문 시 쌓이는 적립금";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // panel43
             // 
             this.panel43.Controls.Add(this.lbl_list);
@@ -242,7 +274,7 @@
             // 
             // panel42
             // 
-            this.panel42.Controls.Add(this.btn_no);
+            this.panel42.Controls.Add(this.btn_remove);
             this.panel42.Controls.Add(this.lbl_point);
             this.panel42.Controls.Add(this.label13);
             this.panel42.Dock = System.Windows.Forms.DockStyle.Bottom;
@@ -250,6 +282,16 @@
             this.panel42.Name = "panel42";
             this.panel42.Size = new System.Drawing.Size(332, 103);
             this.panel42.TabIndex = 3;
+            // 
+            // btn_remove
+            // 
+            this.btn_remove.Location = new System.Drawing.Point(303, 19);
+            this.btn_remove.Name = "btn_remove";
+            this.btn_remove.Size = new System.Drawing.Size(29, 28);
+            this.btn_remove.TabIndex = 2;
+            this.btn_remove.Text = "X";
+            this.btn_remove.UseVisualStyleBackColor = true;
+            this.btn_remove.Click += new System.EventHandler(this.btn_remove_Click);
             // 
             // lbl_point
             // 
@@ -298,7 +340,6 @@
             this.label14.TabIndex = 0;
             this.label14.Text = "-포장비";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // panel40
             // 
@@ -1004,48 +1045,6 @@
             this.label31.Size = new System.Drawing.Size(798, 5);
             this.label31.TabIndex = 2;
             // 
-            // panel44
-            // 
-            this.panel44.Controls.Add(this.lbl_getpoint);
-            this.panel44.Controls.Add(this.label5);
-            this.panel44.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel44.Location = new System.Drawing.Point(0, -10);
-            this.panel44.Name = "panel44";
-            this.panel44.Size = new System.Drawing.Size(332, 103);
-            this.panel44.TabIndex = 5;
-            // 
-            // lbl_getpoint
-            // 
-            this.lbl_getpoint.Dock = System.Windows.Forms.DockStyle.Right;
-            this.lbl_getpoint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.lbl_getpoint.Location = new System.Drawing.Point(218, 0);
-            this.lbl_getpoint.Name = "lbl_getpoint";
-            this.lbl_getpoint.Size = new System.Drawing.Size(114, 103);
-            this.lbl_getpoint.TabIndex = 1;
-            this.lbl_getpoint.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.label5.Font = new System.Drawing.Font("굴림", 9F);
-            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.label5.Location = new System.Drawing.Point(0, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(212, 103);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "주문 시 쌓이는 적립금";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_no
-            // 
-            this.btn_no.Location = new System.Drawing.Point(303, 19);
-            this.btn_no.Name = "btn_no";
-            this.btn_no.Size = new System.Drawing.Size(29, 28);
-            this.btn_no.TabIndex = 2;
-            this.btn_no.Text = "X";
-            this.btn_no.UseVisualStyleBackColor = true;
-            this.btn_no.Click += new System.EventHandler(this.btn_no_Click);
-            // 
             // CatalogForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -1061,6 +1060,7 @@
             this.Shown += new System.EventHandler(this.CatalogForm_Shown);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.panel44.ResumeLayout(false);
             this.panel43.ResumeLayout(false);
             this.panel42.ResumeLayout(false);
             this.panel41.ResumeLayout(false);
@@ -1103,7 +1103,6 @@
             this.panel36.ResumeLayout(false);
             this.panel37.ResumeLayout(false);
             this.panel38.ResumeLayout(false);
-            this.panel44.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1197,8 +1196,8 @@
         private System.Windows.Forms.Label lbl_takeout;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Panel panel44;
-        private System.Windows.Forms.Label lbl_getpoint;
+        private System.Windows.Forms.Label lbl_stackpoint;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btn_no;
+        private System.Windows.Forms.Button btn_remove;
     }
 }

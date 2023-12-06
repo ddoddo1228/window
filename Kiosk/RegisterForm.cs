@@ -16,32 +16,35 @@ namespace Kiosk
 {
     public partial class RegisterForm : Form
     {
-
+        //가상 키보드 변수 선언
         [DllImport("User32.DLL")]
         public static extern Boolean PostMessage(Int32 hWnd, Int32 Msg, Int32 wParam, Int32 lParam);
         public const Int32 WM_USER = 1024;
         public const Int32 WM_CSKEYBOARD = WM_USER + 192;
         public const Int32 WM_CSKEYBOARDMOVE = WM_USER + 193;
         public const Int32 WM_CSKEYBOARDRESIZE = WM_USER + 197;
-
         static Process keyboardPs = null;
+ 
         public RegisterForm()
         {
             InitializeComponent();
             InitializeDynamicComponents();
         }
-
-        private void ReigsterForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        // //레이아웃 컴포넌트
         private void InitializeDynamicComponents()
         {
             this.SuspendLayout();
             this.ClientSize = new Size(1200, 800);
             this.ResumeLayout(false);
         }
+
+        //이벤트
+        private void ReigsterForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        
 
         private void btn_register_Click(object sender, EventArgs e)
         {
@@ -50,12 +53,12 @@ namespace Kiosk
                 MySqlConnection connection = new MySqlConnection("Server = localhost;Database=db_kiosk;Uid=root;Pwd=1111;");
                 connection.Open();
 
-                string insertQuery = "INSERT INTO user (name, id, pwd, point) VALUES ('" + txtbox_name.Text + "', '" + txtbox_id.Text + "', '" + txtbox_pwd.Text + "', '" + 0 + "');";
+                string insertQuery = "INSERT INTO user (name, id, pwd, point) VALUES ('" + tbox_name.Text + "', '" + tbox_id.Text + "', '" + tbox_pwd.Text + "', '" + 0 + "');";
                 MySqlCommand command = new MySqlCommand(insertQuery, connection);
 
                 if (command.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show(txtbox_name.Text + "님 회원가입 완료, 사용할 아이디는 " + txtbox_id.Text + "입니다.");
+                    MessageBox.Show(tbox_name.Text + "님 회원가입 완료, 사용할 아이디는 " + tbox_id.Text + "입니다.");
                     connection.Close();
                     Close();
                 }
@@ -78,7 +81,7 @@ namespace Kiosk
             menuform.ShowDialog();
         }
 
-        private void TextBox_Click(object sender, EventArgs e)
+        private void tbox_Click(object sender, EventArgs e)
         {
             if (keyboardPs == null)
             {
@@ -99,6 +102,6 @@ namespace Kiosk
                 }
             }
             keyboardPs = null;
-        }      
+        }
     }
 }

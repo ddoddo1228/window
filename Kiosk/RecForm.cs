@@ -17,11 +17,8 @@ namespace Kiosk
             InitializeComponent();
             InitializeDynamicComponents();
         }
-        private void RecForm_Load(object sender, EventArgs e)
-        {
 
-        }
-
+        //레이아웃 컴포넌트
         private void InitializeDynamicComponents()
         {
             this.SuspendLayout();
@@ -29,7 +26,8 @@ namespace Kiosk
             this.ResumeLayout(false);
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        // 이벤트
+        private void RecForm_Load(object sender, EventArgs e)
         {
 
         }

@@ -14,32 +14,24 @@ using MySql.Data.MySqlClient;
 
 namespace Kiosk
 {
-    public static class Islogin
-    {
-        public static bool islogin = false;
-    }
     public partial class LoginForm : Form
     {
-
+        // 가상 키보드 변수 선언
         [DllImport("User32.DLL")]
         public static extern Boolean PostMessage(Int32 hWnd, Int32 Msg, Int32 wParam, Int32 lParam);
         public const Int32 WM_USER = 1024;
         public const Int32 WM_CSKEYBOARD = WM_USER + 192;
         public const Int32 WM_CSKEYBOARDMOVE = WM_USER + 193;
         public const Int32 WM_CSKEYBOARDRESIZE = WM_USER + 197;
-
         static Process keyboardPs = null;
+
         public LoginForm()
         {
             InitializeComponent();
             InitializeDynamicComponents();
         }
-
-        private void LoginForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
+        
+        //레이아웃 컴포넌트
         private void InitializeDynamicComponents()
         {
             this.SuspendLayout();
@@ -47,26 +39,32 @@ namespace Kiosk
             this.ResumeLayout(false);
         }
 
-        private void btn_login_Click(object sender, EventArgs e)
+        // 이벤트
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+        
+        // 로그인 이벤트
+        }
+        private void btn_login_Click(object sender, EventArgs e) 
         {
             try
-            {
-                MySqlConnection connection = new MySqlConnection("Server = localhost;Database=db_kiosk;Uid=root;Pwd=1111;");
+            { 
+                MySqlConnection connection = new MySqlConnection("Server = localhost;Database=db_kiosk;Uid=root;Pwd=1111;"); //데이터베이스 연결
                 connection.Open();
 
                 int login_status = 0;
 
-                string loginid = txtbox_id.Text;
-                string loginpwd = txtbox_pwd.Text;
+                string loginid = tbox_id.Text;
+                string loginpwd = tbox_pwd.Text;
 
-                string selectQuery = "SELECT * FROM user WHERE id = \'" + loginid + "\' ";
+                string selectQuery = "SELECT * FROM user WHERE id = \'" + loginid + "\' "; //DB에서 ID 찾기
                 MySqlCommand Selectcommand = new MySqlCommand(selectQuery, connection);
 
                 MySqlDataReader userAccount = Selectcommand.ExecuteReader();
 
                 while (userAccount.Read())
                 {
-                    if (loginid == (string)userAccount["id"] && loginpwd == (string)userAccount["pwd"])
+                    if (loginid == (string)userAccount["id"] && loginpwd == (string)userAccount["pwd"]) // ID와 PWD가 입력값과 맞는지 대조
                     {
                         login_status = 1;
                         Islogin.islogin = true;
@@ -75,7 +73,7 @@ namespace Kiosk
                 }
                 connection.Close();
 
-                if (login_status == 1)
+                if (login_status == 1) // 로그인 여부
                 {
                     MessageBox.Show("로그인 완료");
                     MenuForm menuform = new MenuForm();
@@ -103,15 +101,15 @@ namespace Kiosk
             registerform.ShowDialog();
         }
 
-        private void btn_skip_Click(object sender, EventArgs e)
+        private void btn_skip_Click(object sender, EventArgs e) 
         {
             MenuForm menuform = new MenuForm();
             menuform.StartPosition = FormStartPosition.Manual;
             menuform.Location = this.Location;
             menuform.ShowDialog();
         }
-
-        private void TextBox_Click(object sender, EventArgs e)
+        //내장 키보드 이벤트
+        private void tbox_Click(object sender, EventArgs e)
         {
             // 내장 가상 키보드 실행 경로를 설정
             if (keyboardPs == null)
@@ -125,14 +123,14 @@ namespace Kiosk
                 }
                 else
                 {
-                    filePath = @"C:\windows\system32\osk.exe";
+                    filePath = @"C:\windows\system32\osk.exe"; 
                 }
                 if (File.Exists(filePath))
                 {
-                    keyboardPs = Process.Start(filePath);
+                    keyboardPs = Process.Start(filePath); //osk.exe 실행
                 }
             }
             keyboardPs = null;
-        }       
+        } 
     }
 }

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.pnl_top = new System.Windows.Forms.Panel();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btn_5 = new System.Windows.Forms.Button();
+            this.btn_4 = new System.Windows.Forms.Button();
+            this.btn_3 = new System.Windows.Forms.Button();
+            this.btn_2 = new System.Windows.Forms.Button();
+            this.btn_1 = new System.Windows.Forms.Button();
             this.pnl_left = new System.Windows.Forms.Panel();
             this.pnl_right = new System.Windows.Forms.Panel();
             this.pnl_main = new System.Windows.Forms.FlowLayoutPanel();
@@ -96,45 +96,45 @@
             this.panel44 = new System.Windows.Forms.Panel();
             this.panel45 = new System.Windows.Forms.Panel();
             this.item5_remove = new System.Windows.Forms.Button();
-            this.item5_updown = new System.Windows.Forms.NumericUpDown();
+            this.item5_quantity = new System.Windows.Forms.NumericUpDown();
             this.panel49 = new System.Windows.Forms.Panel();
-            this.item5 = new System.Windows.Forms.PictureBox();
+            this.item5_image = new System.Windows.Forms.PictureBox();
             this.item5_name = new System.Windows.Forms.Label();
             this.panel36 = new System.Windows.Forms.Panel();
             this.item4_price = new System.Windows.Forms.Label();
             this.panel37 = new System.Windows.Forms.Panel();
             this.panel38 = new System.Windows.Forms.Panel();
             this.item4_remove = new System.Windows.Forms.Button();
-            this.item4_updown = new System.Windows.Forms.NumericUpDown();
+            this.item4_quantity = new System.Windows.Forms.NumericUpDown();
             this.panel42 = new System.Windows.Forms.Panel();
-            this.item4 = new System.Windows.Forms.PictureBox();
+            this.item4_image = new System.Windows.Forms.PictureBox();
             this.item4_name = new System.Windows.Forms.Label();
             this.panel29 = new System.Windows.Forms.Panel();
             this.item3_price = new System.Windows.Forms.Label();
             this.panel30 = new System.Windows.Forms.Panel();
             this.panel31 = new System.Windows.Forms.Panel();
             this.item3_remove = new System.Windows.Forms.Button();
-            this.item3_updown = new System.Windows.Forms.NumericUpDown();
+            this.item3_quantity = new System.Windows.Forms.NumericUpDown();
             this.panel35 = new System.Windows.Forms.Panel();
-            this.item3 = new System.Windows.Forms.PictureBox();
+            this.item3_image = new System.Windows.Forms.PictureBox();
             this.item3_name = new System.Windows.Forms.Label();
             this.panel18 = new System.Windows.Forms.Panel();
             this.item2_price = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.panel20 = new System.Windows.Forms.Panel();
             this.item2_remove = new System.Windows.Forms.Button();
-            this.item2_updown = new System.Windows.Forms.NumericUpDown();
+            this.item2_quantity = new System.Windows.Forms.NumericUpDown();
             this.panel28 = new System.Windows.Forms.Panel();
-            this.item2 = new System.Windows.Forms.PictureBox();
+            this.item2_image = new System.Windows.Forms.PictureBox();
             this.item2_name = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.item1_price = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.item1_remove = new System.Windows.Forms.Button();
-            this.item1_updown = new System.Windows.Forms.NumericUpDown();
+            this.item1_quantity = new System.Windows.Forms.NumericUpDown();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.item1 = new System.Windows.Forms.PictureBox();
+            this.item1_image = new System.Windows.Forms.PictureBox();
             this.item1_name = new System.Windows.Forms.Label();
             this.pnl_top.SuspendLayout();
             this.pnl_main.SuspendLayout();
@@ -166,102 +166,102 @@
             this.panel43.SuspendLayout();
             this.panel44.SuspendLayout();
             this.panel45.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item5_updown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item5_quantity)).BeginInit();
             this.panel49.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item5_image)).BeginInit();
             this.panel36.SuspendLayout();
             this.panel37.SuspendLayout();
             this.panel38.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item4_updown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item4_quantity)).BeginInit();
             this.panel42.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item4_image)).BeginInit();
             this.panel29.SuspendLayout();
             this.panel30.SuspendLayout();
             this.panel31.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item3_updown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item3_quantity)).BeginInit();
             this.panel35.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item3_image)).BeginInit();
             this.panel18.SuspendLayout();
             this.panel19.SuspendLayout();
             this.panel20.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item2_updown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item2_quantity)).BeginInit();
             this.panel28.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item2_image)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item1_updown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item1_quantity)).BeginInit();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.item1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item1_image)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_top
             // 
-            this.pnl_top.Controls.Add(this.button5);
-            this.pnl_top.Controls.Add(this.button4);
-            this.pnl_top.Controls.Add(this.button3);
-            this.pnl_top.Controls.Add(this.button2);
-            this.pnl_top.Controls.Add(this.button1);
+            this.pnl_top.Controls.Add(this.btn_5);
+            this.pnl_top.Controls.Add(this.btn_4);
+            this.pnl_top.Controls.Add(this.btn_3);
+            this.pnl_top.Controls.Add(this.btn_2);
+            this.pnl_top.Controls.Add(this.btn_1);
             this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_top.Location = new System.Drawing.Point(0, 0);
             this.pnl_top.Name = "pnl_top";
             this.pnl_top.Size = new System.Drawing.Size(1184, 106);
             this.pnl_top.TabIndex = 0;
             // 
-            // button5
+            // btn_5
             // 
-            this.button5.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button5.Location = new System.Drawing.Point(944, 0);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(236, 106);
-            this.button5.TabIndex = 4;
-            this.button5.Text = "button5";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.btn_5.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_5.Location = new System.Drawing.Point(944, 0);
+            this.btn_5.Name = "btn_5";
+            this.btn_5.Size = new System.Drawing.Size(236, 106);
+            this.btn_5.TabIndex = 4;
+            this.btn_5.Text = "기타";
+            this.btn_5.UseVisualStyleBackColor = true;
+            this.btn_5.Click += new System.EventHandler(this.button5_Click);
             // 
-            // button4
+            // btn_4
             // 
-            this.button4.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button4.Location = new System.Drawing.Point(708, 0);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(236, 106);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btn_4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_4.Location = new System.Drawing.Point(708, 0);
+            this.btn_4.Name = "btn_4";
+            this.btn_4.Size = new System.Drawing.Size(236, 106);
+            this.btn_4.TabIndex = 3;
+            this.btn_4.Text = "디저트";
+            this.btn_4.UseVisualStyleBackColor = true;
+            this.btn_4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // btn_3
             // 
-            this.button3.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button3.Location = new System.Drawing.Point(472, 0);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(236, 106);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btn_3.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_3.Location = new System.Drawing.Point(472, 0);
+            this.btn_3.Name = "btn_3";
+            this.btn_3.Size = new System.Drawing.Size(236, 106);
+            this.btn_3.TabIndex = 2;
+            this.btn_3.Text = "에이드";
+            this.btn_3.UseVisualStyleBackColor = true;
+            this.btn_3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // button2
+            // btn_2
             // 
-            this.button2.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button2.Location = new System.Drawing.Point(236, 0);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(236, 106);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.btn_2.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_2.Location = new System.Drawing.Point(236, 0);
+            this.btn_2.Name = "btn_2";
+            this.btn_2.Size = new System.Drawing.Size(236, 106);
+            this.btn_2.TabIndex = 1;
+            this.btn_2.Text = "스무디";
+            this.btn_2.UseVisualStyleBackColor = true;
+            this.btn_2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button1
+            // btn_1
             // 
-            this.button1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button1.Location = new System.Drawing.Point(0, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(236, 106);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btn_1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.btn_1.Location = new System.Drawing.Point(0, 0);
+            this.btn_1.Name = "btn_1";
+            this.btn_1.Size = new System.Drawing.Size(236, 106);
+            this.btn_1.TabIndex = 0;
+            this.btn_1.Text = "카페";
+            this.btn_1.UseVisualStyleBackColor = true;
+            this.btn_1.Click += new System.EventHandler(this.button1_Click);
             // 
             // pnl_left
             // 
@@ -824,7 +824,7 @@
             // panel45
             // 
             this.panel45.Controls.Add(this.item5_remove);
-            this.panel45.Controls.Add(this.item5_updown);
+            this.panel45.Controls.Add(this.item5_quantity);
             this.panel45.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel45.Location = new System.Drawing.Point(107, 0);
             this.panel45.Name = "panel45";
@@ -840,24 +840,24 @@
             this.item5_remove.Text = "X";
             this.item5_remove.UseVisualStyleBackColor = true;
             // 
-            // item5_updown
+            // item5_quantity
             // 
-            this.item5_updown.Location = new System.Drawing.Point(5, 26);
-            this.item5_updown.Maximum = new decimal(new int[] {
+            this.item5_quantity.Location = new System.Drawing.Point(5, 26);
+            this.item5_quantity.Maximum = new decimal(new int[] {
             99,
             0,
             0,
             0});
-            this.item5_updown.Minimum = new decimal(new int[] {
+            this.item5_quantity.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.item5_updown.Name = "item5_updown";
-            this.item5_updown.Size = new System.Drawing.Size(41, 21);
-            this.item5_updown.TabIndex = 1;
-            this.item5_updown.ThousandsSeparator = true;
-            this.item5_updown.Value = new decimal(new int[] {
+            this.item5_quantity.Name = "item5_quantity";
+            this.item5_quantity.Size = new System.Drawing.Size(41, 21);
+            this.item5_quantity.TabIndex = 1;
+            this.item5_quantity.ThousandsSeparator = true;
+            this.item5_quantity.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -865,22 +865,22 @@
             // 
             // panel49
             // 
-            this.panel49.Controls.Add(this.item5);
+            this.panel49.Controls.Add(this.item5_image);
             this.panel49.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel49.Location = new System.Drawing.Point(0, 0);
             this.panel49.Name = "panel49";
             this.panel49.Size = new System.Drawing.Size(108, 72);
             this.panel49.TabIndex = 0;
             // 
-            // item5
+            // item5_image
             // 
-            this.item5.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.item5.Location = new System.Drawing.Point(0, 0);
-            this.item5.Name = "item5";
-            this.item5.Size = new System.Drawing.Size(108, 72);
-            this.item5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.item5.TabIndex = 0;
-            this.item5.TabStop = false;
+            this.item5_image.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.item5_image.Location = new System.Drawing.Point(0, 0);
+            this.item5_image.Name = "item5_image";
+            this.item5_image.Size = new System.Drawing.Size(108, 72);
+            this.item5_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.item5_image.TabIndex = 0;
+            this.item5_image.TabStop = false;
             // 
             // item5_name
             // 
@@ -924,7 +924,7 @@
             // panel38
             // 
             this.panel38.Controls.Add(this.item4_remove);
-            this.panel38.Controls.Add(this.item4_updown);
+            this.panel38.Controls.Add(this.item4_quantity);
             this.panel38.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel38.Location = new System.Drawing.Point(107, 0);
             this.panel38.Name = "panel38";
@@ -940,24 +940,24 @@
             this.item4_remove.Text = "X";
             this.item4_remove.UseVisualStyleBackColor = true;
             // 
-            // item4_updown
+            // item4_quantity
             // 
-            this.item4_updown.Location = new System.Drawing.Point(5, 26);
-            this.item4_updown.Maximum = new decimal(new int[] {
+            this.item4_quantity.Location = new System.Drawing.Point(5, 26);
+            this.item4_quantity.Maximum = new decimal(new int[] {
             99,
             0,
             0,
             0});
-            this.item4_updown.Minimum = new decimal(new int[] {
+            this.item4_quantity.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.item4_updown.Name = "item4_updown";
-            this.item4_updown.Size = new System.Drawing.Size(41, 21);
-            this.item4_updown.TabIndex = 1;
-            this.item4_updown.ThousandsSeparator = true;
-            this.item4_updown.Value = new decimal(new int[] {
+            this.item4_quantity.Name = "item4_quantity";
+            this.item4_quantity.Size = new System.Drawing.Size(41, 21);
+            this.item4_quantity.TabIndex = 1;
+            this.item4_quantity.ThousandsSeparator = true;
+            this.item4_quantity.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -965,22 +965,22 @@
             // 
             // panel42
             // 
-            this.panel42.Controls.Add(this.item4);
+            this.panel42.Controls.Add(this.item4_image);
             this.panel42.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel42.Location = new System.Drawing.Point(0, 0);
             this.panel42.Name = "panel42";
             this.panel42.Size = new System.Drawing.Size(108, 72);
             this.panel42.TabIndex = 0;
             // 
-            // item4
+            // item4_image
             // 
-            this.item4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.item4.Location = new System.Drawing.Point(0, 0);
-            this.item4.Name = "item4";
-            this.item4.Size = new System.Drawing.Size(108, 72);
-            this.item4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.item4.TabIndex = 0;
-            this.item4.TabStop = false;
+            this.item4_image.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.item4_image.Location = new System.Drawing.Point(0, 0);
+            this.item4_image.Name = "item4_image";
+            this.item4_image.Size = new System.Drawing.Size(108, 72);
+            this.item4_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.item4_image.TabIndex = 0;
+            this.item4_image.TabStop = false;
             // 
             // item4_name
             // 
@@ -1024,7 +1024,7 @@
             // panel31
             // 
             this.panel31.Controls.Add(this.item3_remove);
-            this.panel31.Controls.Add(this.item3_updown);
+            this.panel31.Controls.Add(this.item3_quantity);
             this.panel31.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel31.Location = new System.Drawing.Point(107, 0);
             this.panel31.Name = "panel31";
@@ -1040,24 +1040,24 @@
             this.item3_remove.Text = "X";
             this.item3_remove.UseVisualStyleBackColor = true;
             // 
-            // item3_updown
+            // item3_quantity
             // 
-            this.item3_updown.Location = new System.Drawing.Point(5, 26);
-            this.item3_updown.Maximum = new decimal(new int[] {
+            this.item3_quantity.Location = new System.Drawing.Point(5, 26);
+            this.item3_quantity.Maximum = new decimal(new int[] {
             99,
             0,
             0,
             0});
-            this.item3_updown.Minimum = new decimal(new int[] {
+            this.item3_quantity.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.item3_updown.Name = "item3_updown";
-            this.item3_updown.Size = new System.Drawing.Size(41, 21);
-            this.item3_updown.TabIndex = 1;
-            this.item3_updown.ThousandsSeparator = true;
-            this.item3_updown.Value = new decimal(new int[] {
+            this.item3_quantity.Name = "item3_quantity";
+            this.item3_quantity.Size = new System.Drawing.Size(41, 21);
+            this.item3_quantity.TabIndex = 1;
+            this.item3_quantity.ThousandsSeparator = true;
+            this.item3_quantity.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -1065,22 +1065,22 @@
             // 
             // panel35
             // 
-            this.panel35.Controls.Add(this.item3);
+            this.panel35.Controls.Add(this.item3_image);
             this.panel35.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel35.Location = new System.Drawing.Point(0, 0);
             this.panel35.Name = "panel35";
             this.panel35.Size = new System.Drawing.Size(108, 72);
             this.panel35.TabIndex = 0;
             // 
-            // item3
+            // item3_image
             // 
-            this.item3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.item3.Location = new System.Drawing.Point(0, 0);
-            this.item3.Name = "item3";
-            this.item3.Size = new System.Drawing.Size(108, 72);
-            this.item3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.item3.TabIndex = 0;
-            this.item3.TabStop = false;
+            this.item3_image.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.item3_image.Location = new System.Drawing.Point(0, 0);
+            this.item3_image.Name = "item3_image";
+            this.item3_image.Size = new System.Drawing.Size(108, 72);
+            this.item3_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.item3_image.TabIndex = 0;
+            this.item3_image.TabStop = false;
             // 
             // item3_name
             // 
@@ -1124,7 +1124,7 @@
             // panel20
             // 
             this.panel20.Controls.Add(this.item2_remove);
-            this.panel20.Controls.Add(this.item2_updown);
+            this.panel20.Controls.Add(this.item2_quantity);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel20.Location = new System.Drawing.Point(107, 0);
             this.panel20.Name = "panel20";
@@ -1140,24 +1140,24 @@
             this.item2_remove.Text = "X";
             this.item2_remove.UseVisualStyleBackColor = true;
             // 
-            // item2_updown
+            // item2_quantity
             // 
-            this.item2_updown.Location = new System.Drawing.Point(5, 26);
-            this.item2_updown.Maximum = new decimal(new int[] {
+            this.item2_quantity.Location = new System.Drawing.Point(5, 26);
+            this.item2_quantity.Maximum = new decimal(new int[] {
             99,
             0,
             0,
             0});
-            this.item2_updown.Minimum = new decimal(new int[] {
+            this.item2_quantity.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.item2_updown.Name = "item2_updown";
-            this.item2_updown.Size = new System.Drawing.Size(41, 21);
-            this.item2_updown.TabIndex = 1;
-            this.item2_updown.ThousandsSeparator = true;
-            this.item2_updown.Value = new decimal(new int[] {
+            this.item2_quantity.Name = "item2_quantity";
+            this.item2_quantity.Size = new System.Drawing.Size(41, 21);
+            this.item2_quantity.TabIndex = 1;
+            this.item2_quantity.ThousandsSeparator = true;
+            this.item2_quantity.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -1165,22 +1165,22 @@
             // 
             // panel28
             // 
-            this.panel28.Controls.Add(this.item2);
+            this.panel28.Controls.Add(this.item2_image);
             this.panel28.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel28.Location = new System.Drawing.Point(0, 0);
             this.panel28.Name = "panel28";
             this.panel28.Size = new System.Drawing.Size(108, 72);
             this.panel28.TabIndex = 0;
             // 
-            // item2
+            // item2_image
             // 
-            this.item2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.item2.Location = new System.Drawing.Point(0, 0);
-            this.item2.Name = "item2";
-            this.item2.Size = new System.Drawing.Size(108, 72);
-            this.item2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.item2.TabIndex = 0;
-            this.item2.TabStop = false;
+            this.item2_image.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.item2_image.Location = new System.Drawing.Point(0, 0);
+            this.item2_image.Name = "item2_image";
+            this.item2_image.Size = new System.Drawing.Size(108, 72);
+            this.item2_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.item2_image.TabIndex = 0;
+            this.item2_image.TabStop = false;
             // 
             // item2_name
             // 
@@ -1224,7 +1224,7 @@
             // panel4
             // 
             this.panel4.Controls.Add(this.item1_remove);
-            this.panel4.Controls.Add(this.item1_updown);
+            this.panel4.Controls.Add(this.item1_quantity);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel4.Location = new System.Drawing.Point(107, 0);
             this.panel4.Name = "panel4";
@@ -1240,24 +1240,24 @@
             this.item1_remove.Text = "X";
             this.item1_remove.UseVisualStyleBackColor = true;
             // 
-            // item1_updown
+            // item1_quantity
             // 
-            this.item1_updown.Location = new System.Drawing.Point(3, 26);
-            this.item1_updown.Maximum = new decimal(new int[] {
+            this.item1_quantity.Location = new System.Drawing.Point(3, 26);
+            this.item1_quantity.Maximum = new decimal(new int[] {
             99,
             0,
             0,
             0});
-            this.item1_updown.Minimum = new decimal(new int[] {
+            this.item1_quantity.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.item1_updown.Name = "item1_updown";
-            this.item1_updown.Size = new System.Drawing.Size(41, 21);
-            this.item1_updown.TabIndex = 0;
-            this.item1_updown.ThousandsSeparator = true;
-            this.item1_updown.Value = new decimal(new int[] {
+            this.item1_quantity.Name = "item1_quantity";
+            this.item1_quantity.Size = new System.Drawing.Size(41, 21);
+            this.item1_quantity.TabIndex = 0;
+            this.item1_quantity.ThousandsSeparator = true;
+            this.item1_quantity.Value = new decimal(new int[] {
             1,
             0,
             0,
@@ -1265,22 +1265,22 @@
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.item1);
+            this.panel3.Controls.Add(this.item1_image);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel3.Location = new System.Drawing.Point(0, 0);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(108, 72);
             this.panel3.TabIndex = 0;
             // 
-            // item1
+            // item1_image
             // 
-            this.item1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.item1.Location = new System.Drawing.Point(0, 0);
-            this.item1.Name = "item1";
-            this.item1.Size = new System.Drawing.Size(108, 72);
-            this.item1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.item1.TabIndex = 0;
-            this.item1.TabStop = false;
+            this.item1_image.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.item1_image.Location = new System.Drawing.Point(0, 0);
+            this.item1_image.Name = "item1_image";
+            this.item1_image.Size = new System.Drawing.Size(108, 72);
+            this.item1_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.item1_image.TabIndex = 0;
+            this.item1_image.TabStop = false;
             // 
             // item1_name
             // 
@@ -1336,33 +1336,33 @@
             this.panel43.ResumeLayout(false);
             this.panel44.ResumeLayout(false);
             this.panel45.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.item5_updown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item5_quantity)).EndInit();
             this.panel49.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.item5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item5_image)).EndInit();
             this.panel36.ResumeLayout(false);
             this.panel37.ResumeLayout(false);
             this.panel38.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.item4_updown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item4_quantity)).EndInit();
             this.panel42.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.item4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item4_image)).EndInit();
             this.panel29.ResumeLayout(false);
             this.panel30.ResumeLayout(false);
             this.panel31.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.item3_updown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item3_quantity)).EndInit();
             this.panel35.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.item3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item3_image)).EndInit();
             this.panel18.ResumeLayout(false);
             this.panel19.ResumeLayout(false);
             this.panel20.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.item2_updown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item2_quantity)).EndInit();
             this.panel28.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.item2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item2_image)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.item1_updown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item1_quantity)).EndInit();
             this.panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.item1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.item1_image)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1370,11 +1370,11 @@
         #endregion
 
         private System.Windows.Forms.Panel pnl_top;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btn_5;
+        private System.Windows.Forms.Button btn_4;
+        private System.Windows.Forms.Button btn_3;
+        private System.Windows.Forms.Button btn_2;
+        private System.Windows.Forms.Button btn_1;
         private System.Windows.Forms.Panel pnl_left;
         private System.Windows.Forms.Panel pnl_right;
         private System.Windows.Forms.FlowLayoutPanel pnl_main;
@@ -1439,39 +1439,39 @@
         private System.Windows.Forms.Panel panel44;
         private System.Windows.Forms.Panel panel45;
         private System.Windows.Forms.Panel panel49;
-        private System.Windows.Forms.PictureBox item5;
+        private System.Windows.Forms.PictureBox item5_image;
         private System.Windows.Forms.Label item5_name;
         private System.Windows.Forms.Panel panel36;
         private System.Windows.Forms.Panel panel37;
         private System.Windows.Forms.Panel panel38;
         private System.Windows.Forms.Panel panel42;
-        private System.Windows.Forms.PictureBox item4;
+        private System.Windows.Forms.PictureBox item4_image;
         private System.Windows.Forms.Label item4_name;
         private System.Windows.Forms.Panel panel29;
         private System.Windows.Forms.Panel panel30;
         private System.Windows.Forms.Panel panel31;
         private System.Windows.Forms.Panel panel35;
-        private System.Windows.Forms.PictureBox item3;
+        private System.Windows.Forms.PictureBox item3_image;
         private System.Windows.Forms.Label item3_name;
         private System.Windows.Forms.Panel panel18;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.Panel panel20;
         private System.Windows.Forms.Panel panel28;
-        private System.Windows.Forms.PictureBox item2;
+        private System.Windows.Forms.PictureBox item2_image;
         private System.Windows.Forms.Label item2_name;
-        private System.Windows.Forms.PictureBox item1;
+        private System.Windows.Forms.PictureBox item1_image;
         private System.Windows.Forms.TextBox tbox_amount;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.NumericUpDown item5_updown;
-        private System.Windows.Forms.NumericUpDown item4_updown;
-        private System.Windows.Forms.NumericUpDown item2_updown;
-        private System.Windows.Forms.NumericUpDown item1_updown;
+        private System.Windows.Forms.NumericUpDown item5_quantity;
+        private System.Windows.Forms.NumericUpDown item4_quantity;
+        private System.Windows.Forms.NumericUpDown item2_quantity;
+        private System.Windows.Forms.NumericUpDown item1_quantity;
         private System.Windows.Forms.Label item5_price;
         private System.Windows.Forms.Label item4_price;
         private System.Windows.Forms.Label item3_price;
         private System.Windows.Forms.Label item2_price;
         private System.Windows.Forms.Label item1_price;
-        private System.Windows.Forms.NumericUpDown item3_updown;
+        private System.Windows.Forms.NumericUpDown item3_quantity;
         private System.Windows.Forms.Button item1_remove;
         private System.Windows.Forms.Button item5_remove;
         private System.Windows.Forms.Button item4_remove;

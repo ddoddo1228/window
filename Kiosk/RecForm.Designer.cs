@@ -128,8 +128,6 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.Text = "회원 로그인을 하시면 포인트 적립과\r\n 포인트 사용을 하실 수 있습니다.";
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // RecForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);

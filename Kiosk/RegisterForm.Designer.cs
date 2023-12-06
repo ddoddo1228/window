@@ -33,15 +33,15 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
-            this.txtbox_name = new System.Windows.Forms.TextBox();
+            this.tbox_name = new System.Windows.Forms.TextBox();
             this.panel8 = new System.Windows.Forms.Panel();
             this.btn_register = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.txtbox_pwd = new System.Windows.Forms.TextBox();
-            this.txtbox_id = new System.Windows.Forms.TextBox();
+            this.tbox_pwd = new System.Windows.Forms.TextBox();
+            this.tbox_id = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -102,21 +102,21 @@
             // 
             // panel9
             // 
-            this.panel9.Controls.Add(this.txtbox_name);
+            this.panel9.Controls.Add(this.tbox_name);
             this.panel9.Location = new System.Drawing.Point(440, 203);
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(312, 44);
             this.panel9.TabIndex = 10;
             // 
-            // txtbox_name
+            // tbox_name
             // 
-            this.txtbox_name.BackColor = System.Drawing.Color.White;
-            this.txtbox_name.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtbox_name.Location = new System.Drawing.Point(0, 23);
-            this.txtbox_name.Name = "txtbox_name";
-            this.txtbox_name.Size = new System.Drawing.Size(312, 21);
-            this.txtbox_name.TabIndex = 0;
-            this.txtbox_name.Click += new System.EventHandler(this.TextBox_Click);
+            this.tbox_name.BackColor = System.Drawing.Color.White;
+            this.tbox_name.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tbox_name.Location = new System.Drawing.Point(0, 23);
+            this.tbox_name.Name = "tbox_name";
+            this.tbox_name.Size = new System.Drawing.Size(312, 21);
+            this.tbox_name.TabIndex = 0;
+            this.tbox_name.Click += new System.EventHandler(this.tbox_Click);
             // 
             // panel8
             // 
@@ -168,30 +168,30 @@
             // 
             // panel6
             // 
-            this.panel6.Controls.Add(this.txtbox_pwd);
-            this.panel6.Controls.Add(this.txtbox_id);
+            this.panel6.Controls.Add(this.tbox_pwd);
+            this.panel6.Controls.Add(this.tbox_id);
             this.panel6.Location = new System.Drawing.Point(440, 129);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(313, 71);
             this.panel6.TabIndex = 5;
             // 
-            // txtbox_pwd
+            // tbox_pwd
             // 
-            this.txtbox_pwd.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.txtbox_pwd.Location = new System.Drawing.Point(0, 50);
-            this.txtbox_pwd.Name = "txtbox_pwd";
-            this.txtbox_pwd.Size = new System.Drawing.Size(313, 21);
-            this.txtbox_pwd.TabIndex = 4;
-            this.txtbox_pwd.Click += new System.EventHandler(this.TextBox_Click);
+            this.tbox_pwd.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.tbox_pwd.Location = new System.Drawing.Point(0, 50);
+            this.tbox_pwd.Name = "tbox_pwd";
+            this.tbox_pwd.Size = new System.Drawing.Size(313, 21);
+            this.tbox_pwd.TabIndex = 4;
+            this.tbox_pwd.Click += new System.EventHandler(this.tbox_Click);
             // 
-            // txtbox_id
+            // tbox_id
             // 
-            this.txtbox_id.Dock = System.Windows.Forms.DockStyle.Top;
-            this.txtbox_id.Location = new System.Drawing.Point(0, 0);
-            this.txtbox_id.Name = "txtbox_id";
-            this.txtbox_id.Size = new System.Drawing.Size(313, 21);
-            this.txtbox_id.TabIndex = 3;
-            this.txtbox_id.Click += new System.EventHandler(this.TextBox_Click);
+            this.tbox_id.Dock = System.Windows.Forms.DockStyle.Top;
+            this.tbox_id.Location = new System.Drawing.Point(0, 0);
+            this.tbox_id.Name = "tbox_id";
+            this.tbox_id.Size = new System.Drawing.Size(313, 21);
+            this.tbox_id.TabIndex = 3;
+            this.tbox_id.Click += new System.EventHandler(this.tbox_Click);
             // 
             // label1
             // 
@@ -262,14 +262,14 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.TextBox txtbox_pwd;
-        private System.Windows.Forms.TextBox txtbox_id;
+        private System.Windows.Forms.TextBox tbox_pwd;
+        private System.Windows.Forms.TextBox tbox_id;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel9;
-        private System.Windows.Forms.TextBox txtbox_name;
+        private System.Windows.Forms.TextBox tbox_name;
     }
 }

@@ -28,6 +28,7 @@ namespace Kiosk
 
         }
 
+        //로그인 유무에 따라 적립금 표시
         private void EndForm_Shown(object sender, EventArgs e)
         {
             if(Islogin.islogin == false)
@@ -46,6 +47,7 @@ namespace Kiosk
             this.ResumeLayout(false);
             InitializeAutoCloseTimer();
         }
+        //폼 자동 종료 함수
         private void InitializeAutoCloseTimer()
         {
             // 타이머 초기화 (인터벌을 밀리초 단위로 설정)
@@ -65,6 +67,7 @@ namespace Kiosk
             Application.Exit();
         }
 
+        //현재 적립금 값을 DB에서 가져오는 함수
         private int GetRemainingPoint()
         {
             try

@@ -19,7 +19,6 @@ namespace Kiosk
         public CardForm()
         {
             InitializeComponent();
-            this.Shown += CardForm_Shown;
             InitializeDynamicComponents();
         }
 
@@ -33,10 +32,7 @@ namespace Kiosk
         {
 
         }
-        private void CardForm_Shown(object sender, EventArgs e)
-        {
-
-        }
+        //클릭 이벤트를 통해 '결제' 발생시 실제 DB에서 포인트 적립 및 차감 정리 진행 + 최종금액 다음 폼으로 값 이동
         private void btn_next_Click(object sender, EventArgs e)
         {
             AssignPoint();
@@ -47,6 +43,7 @@ namespace Kiosk
             endform.Location = this.Location;
             endform.ShowDialog();
         }
+        //적립금 적립 함수
         private void AssignPoint()
         {
             try
@@ -73,6 +70,7 @@ namespace Kiosk
             }
 
         }
+        //사용한 적립금만큼 감소시키는 함수
         private void SubstractPoint()
         {
             if (Used.used == true)
